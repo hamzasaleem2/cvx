@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-const DEFAULT_URL = "";
+const DEFAULT_URL = "https://brave-duck-959.convex.site";
 
 const url = process.env.CONVEX_SITE_URL || DEFAULT_URL;
 if (!url) {
