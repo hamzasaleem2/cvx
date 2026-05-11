@@ -1,0 +1,44 @@
+{
+  "name": "@hamzasaleemorg/cvx",
+  "version": "0.0.1",
+  "description": "A terminal-native Convex component catalog",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "cvx": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "convex",
+    "components",
+    "cli",
+    "catalog",
+    "registry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamzasaleem2/cvx"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "postbuild": "printf '#!/usr/bin/env node\\n' | cat - dist/index.js > dist/index.tmp && mv dist/index.tmp dist/index.js && chmod +x dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.4.3",
+    "chalk": "^5",
+    "commander": "^13",
+    "dotenv": "^16"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}

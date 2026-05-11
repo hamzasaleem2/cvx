@@ -1,0 +1,13 @@
+{
+  "name": "cvx",
+  "private": true,
+  "scripts": {
+    "dev": "convex dev",
+    "cli": "pnpm --filter @hamzasaleemorg/cvx dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "convex": "^1.38.0"
+  }
+}
