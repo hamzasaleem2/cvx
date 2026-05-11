@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "cvx": "./dist/index.js"
+    "cvx": "dist/index.js"
   },
   "files": [
     "dist"
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hamzasaleem2/cvx"
+    "url": "git+https://github.com/hamzasaleem2/cvx.git"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
