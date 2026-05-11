@@ -1,5 +1,7 @@
 # cvx
 
+[![npm](https://img.shields.io/npm/v/@hamzasaleemorg/cvx?color=3fb950&label=)](https://www.npmjs.com/package/@hamzasaleemorg/cvx)
+
 A terminal-native Convex component catalog — for humans and AI agents.
 
 ## Install
