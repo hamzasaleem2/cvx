@@ -1,8 +1,6 @@
 # cvx
 
-A terminal-native Convex component catalog.
-
-Find, inspect, and install Convex components — all from `cvx`.
+A terminal-native Convex component catalog — for humans and AI agents.
 
 ## Install
 
@@ -10,7 +8,7 @@ Find, inspect, and install Convex components — all from `cvx`.
 npm install -g @hamzasaleemorg/cvx
 ```
 
-Once installed, use the `cvx` command:
+## CLI
 
 ```bash
 cvx                    # fuzzy-find any component
@@ -18,3 +16,26 @@ cvx better-auth        # jump straight to a component
 cvx list               # browse all by category
 cvx list -c Auth       # filter by category
 ```
+
+## MCP Server
+
+Start an MCP server for AI agents (Claude, Cursor, Cline, etc.):
+
+```bash
+cvx mcp
+```
+
+Configure your AI tool:
+
+```json
+{
+  "mcpServers": {
+    "cvx": {
+      "command": "cvx",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+Agents get access to `search_components`, `get_component`, `get_install`.

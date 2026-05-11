@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { find } from "./commands/find.js";
 import { list } from "./commands/list.js";
+import { run as mcp } from "./commands/mcp.js";
 import { checkForUpdates } from "./update.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -25,13 +26,20 @@ program
   .exitOverride();
 
 program
+  .command("mcp")
+  .description("Start MCP server for AI agents")
+  .action(mcp);
+
+program
   .command("list")
   .description("List all Convex components")
   .option("-c, --category <category>", "Filter by category")
   .option("--json", "Output as JSON")
   .action(list);
 
-checkForUpdates();
+if (!process.argv.includes("mcp")) {
+  checkForUpdates();
+}
 
 try {
   program.parse();

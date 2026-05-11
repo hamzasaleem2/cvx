@@ -1,6 +1,6 @@
 {
   "name": "@hamzasaleemorg/cvx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A terminal-native Convex component catalog",
   "license": "MIT",
   "type": "module",
